@@ -1,0 +1,286 @@
+# ═══════════════════════════════════════════════════
+#   CrystallAdmin - Русская локализация
+# ═══════════════════════════════════════════════════
+
+# Общие сообщения
+general:
+  no-permission: "&cНедостаточно прав."
+  player-only: "&cЭта команда только для игроков."
+  player-not-found: "&cИгрок &f{player} &cне найден."
+  player-offline: "&cИгрок не в сети."
+  invalid-time-format: "&cНеверный формат времени. Примеры: 30m, 1h, 7d, 1mo, perm"
+  database-error: "&cОшибка базы данных. Обратитесь к администратору."
+  config-reloaded: "&8[&aCrystallAdmin&8] &7Конфиг перезагружен."
+
+# Команды наказаний
+punishments:
+  ban-success: "&7Игрок &c{player} &7забанен. Причина: &f{reason}"
+  ban-success-temp: "&7Игрок &c{player} &7забанен до &f{duration}"
+  unban-success: "&7Игрок &f{player} &7разбанен."
+  unban-not-found: "&cАктивный бан для &f{player} &cне найден."
+
+  mute-success: "&7Игрок &e{player} &7замучен до &f{duration}"
+  unmute-success: "&7Игрок &f{player} &7размучен."
+  unmute-not-found: "&cАктивный мут для &f{player} &cне найден."
+
+  warn-success: "&7Предупреждение выдано &f{player}"
+  unwarn-success: "&7Варн &c#{id} &7удалён у &f{player}"
+  unwarn-not-found: "&cВарн не найден."
+
+  kick-success: "&7Игрок &f{player} &7кикнут."
+
+  muted-message: |
+    &8[&cМУТ&8] &fВы заглушены.
+    &7Причина: &c{reason}
+    &7Осталось: &c{remaining}
+
+# Репорты
+reports:
+  sent: |
+    
+    &8[&2РЕПОРТ&8] &7Ваш репорт отправлен администрации.
+    &8Сообщение: &f{message}
+
+  cooldown: "&cВы недавно отправляли репорт. Подождите &f{seconds}с"
+  admin-notification: "&8[&2РЕПОРТ&8] &7Новый репорт от &f{player}&8: &f{message}"
+  claimed: "&8[&2РЕПОРТЫ&8] &7Репорт &c#{id} &7взят в работу."
+  closed: "&8[&2РЕПОРТЫ&8] &7Репорт &c#{id} &7закрыт."
+  teleported: "&8[&2РЕПОРТЫ&8] &7Телепорт к репорту &c#{id}"
+  location-unavailable: "&cЛокация репорта недоступна."
+  pending-notification: "&8[&2РЕПОРТЫ&8] &7Ожидают рассмотрения: &c{count} &7репортов. &8/adm reports"
+
+# Админ-чат
+admin-chat:
+  enabled: "&8[&4ADMINCHAT&8] &7Режим &aвключен&7."
+  disabled: "&8[&4ADMINCHAT&8] &7Режим &cвыключен&7."
+
+# Ваниш
+vanish:
+  enabled: "&8[&4VANISH&8] &7Режим невидимости &aвключен&7."
+  disabled: "&8[&4VANISH&8] &7Режим невидимости &cвыключен&7."
+
+# Freeze
+freeze:
+  frozen: "&7Игрок &f{player} &7заморожен."
+  unfrozen: "&7Игрок &f{player} &7разморожен."
+
+# Screenshare
+screenshare:
+  started: "&8[&cSS&8] &7Проверка запущена для &c{player}&7. Таймер: &f{time}"
+  cleared: "&7Проверка &f{player} &7завершена."
+  not-under-check: "&cЭтот игрок не проходит проверку."
+  player-frozen: "&aПроверка завершена. Вы свободны!"
+  auto-banned: "&8[&cSS&8] &7Игрок &c{player} &7забанен за выход во время проверки."
+  list-header: "&8[&cSS&8] &7Игроки под проверкой:"
+  list-empty: "  &7Никто не проходит проверку."
+  list-entry: "  &8» &c{player}"
+
+# Заметки стаффа
+notes:
+  added: "&8[&7ЗАМЕТКИ&8] &7Заметка добавлена к профилю &f{player}"
+  deleted: "&7Заметка &c#{id} &7удалена."
+  not-found: "&cЗаметка не найдена."
+  list-header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  list-title: "  &7Заметки о &f{player} &8({count}):"
+  list-empty: "  &7Заметок нет."
+  list-footer: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# Прочие команды
+misc:
+  anonymous-sent: "&7Анонимное сообщение отправлено &f{player}"
+  teleported: "&7Тихая телепортация к &f{player}"
+  lp-class-set: "&7Игроку &f{player} &7установлена группа &f{group}"
+  alert-sent: "&7Alert отправлен всем игрокам."
+  spy-enabled: "&8[&4SPY&8] &7Слежка за &c{player} &aвключена&7."
+  spy-disabled: "&8[&4SPY&8] &7Слежка за &c{player} &cвыключена&7."
+
+# Античит
+anticheat:
+  alert: "&8[&c⚠ AC&8] &7{player} &8→ &c{check} &8| &7VL: &c{vl} &8| &7{details}"
+  checks:
+    reach: "Reach"
+    fast-place: "FastPlace"
+    auto-clicker: "AutoClicker"
+    fly: "Fly"
+    xray: "X-Ray"
+    brand: "Чит-клиент"
+
+# X-Ray монитор
+xray:
+  notification: "&8[&6X-RAY&8] &7{player} &7нашёл &c{ore} &8(&7за час: &c{count}&8)"
+  report-header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  report-title: "  &6&lX-RAY Монитор &8— &f{player}"
+  report-background: "  &8» &7Добыто фона: &f{count}"
+  report-suspicious: " &c⚠ ПОДОЗРИТЕЛЬНО"
+  report-overall: "  &8» &7Всего алмазов: &f{count}"
+  report-footer: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# Статистика
+stats:
+  header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  title: "  &6&lСтатистика сервера"
+  tps: "  &8» &7TPS: &f{tps}"
+  memory: "  &8» &7RAM: &f{used}&7/&f{max} &8(&c{percent}%&8)"
+  players: "  &8» &7Игроки: &f{online}&7/&f{max}"
+  uptime: "  &8» &7Аптайм: &f{uptime}"
+  footer: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# Help страницы
+help:
+  header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  title: "  &4&lCrystallAdmin &8v2.0 &8— &7Страница {page}/{total}"
+  footer: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  next-page: "  &7/adm help {page} &8— &7следующая страница"
+
+  commands:
+    page1:
+      - "  &c/adm cp &8<ник> &7— карточка игрока"
+      - "  &c/adm chat &7или &c/ac &7— админ-чат (префикс: &f#&7)"
+      - "  &c/adm bc &8<текст> &7— объявление"
+      - "  &c/adm a &8<игрок> <текст> &7— анонимное сообщение"
+      - "  &c/adm reports &7— GUI репортов"
+      - "  &c/adm vanish &7или &c/adm v &7— ваниш"
+      - "  &c/adm class &8<игрок> <группа> &7— LP группа"
+      - "  &c/adm freeze &8<игрок> &7— заморозить"
+      - "  &c/adm spy &8<игрок> &7— слежка за командами"
+
+    page2:
+      - "  &c/ban &8<игрок> <причина> &7— перманентный бан"
+      - "  &c/tempban &8<игрок> <время> <причина>"
+      - "  &c/unban &8<игрок>"
+      - "  &c/mute &8<игрок> <время/perm> <причина>"
+      - "  &c/unmute &8<игрок>"
+      - "  &c/warn &8<игрок> <время/perm> <причина>"
+      - "  &c/unwarn &8<игрок> <номер>"
+      - "  &c/kick &8<игрок> <причина>"
+      - "  &c/adm history &8<игрок> &7— история наказаний"
+      - "  &7Форматы времени: &f30m 1h 12h 1d 7d 1mo perm"
+
+    page3:
+      - "  &c/ss &8<игрок> &7— SS проверка"
+      - "  &c/adm ssclear &8<игрок> &7— проверка пройдена"
+      - "  &c/note &8<игрок> <текст> &7— заметка"
+      - "  &c/adm notes &8<игрок> &7— просмотр заметок"
+      - "  &c/invsee &8<игрок> &7— инвентарь"
+      - "  &c/ec &8<игрок> &7— эндер сундук"
+      - "  &c/checkore &8<игрок> &7— X-Ray монитор"
+      - "  &c/adm alert &8<текст> &7— title всем"
+      - "  &c/adm tpo &8<игрок> &7— тихая ТП"
+      - "  &c/adm stats &7— статистика сервера"
+      - "  &c/adm lc &7— ручная очистка"
+      - "  &c/adm reload &7— перезагрузить конфиг"
+
+# История игрока
+history:
+  header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  title: "  &4&lИстория наказаний: &f{player}"
+  bans-header: "&c  Баны ({count}):"
+  mutes-header: "&e  Муты ({count}):"
+  warns-header: "&6  Варны ({count}):"
+  footer: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# /cp player card
+cp:
+  header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  status-online: "&aОнлайн"
+  status-offline: "&7Оффлайн"
+  uuid: "  &8› &7UUID: &f{value}"
+  client: "  &8› &7Клиент: &f{value}"
+  version: "  &8› &7Версия: &f{value}"
+  ping: "  &8› &7Пинг: &f{value}мс"
+  ping-offline: "  &8› &7Пинг: &7—"
+  ip: "  &8› &7IP: &f{value}"
+  flags-clean: "  &8› &7Флаги: &aЧисто"
+  flags-dirty: "  &8› &7Флаги: &c{value}"
+  last-seen: "  &8› &7Последний вход: &f{value}"
+  playtime: "  &8› &7На сервере: &f{value}"
+  spawn: "  &8› &7Спавн: &f{value}"
+  spawn-none: "Не задан"
+  warns: "  &8› &7Варны: &c{current}&8/&c{max}"
+  alts-header: "  &8› &7Альты (один IP):"
+  alts-entry: "    &8- &e{name}"
+  ban-active: "  &8› &c[БАН] &f{reason} &8| &7до: &c{expires}"
+  mute-active: "  &8› &e[МУТ] &f{reason} &8| &7до: &e{expires}"
+  warns-header: "  &8› &7Предупреждения:"
+  warns-entry: "    &8[#{id}] &f{reason} &8| &7{admin} | до: &f{expires}"
+  notes-header: "  &8› &7Заметки стаффа:"
+  notes-entry: "    &8[#{id}] &7{author} &8| &f{note} &8({date})"
+
+# Карточка игрока (/cp)
+cp:
+  header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  status-online: "&aОнлайн"
+  status-offline: "&7Оффлайн"
+  uuid:      "  &8› &7UUID: &f{value}"
+  client:    "  &8› &7Клиент: &f{value}"
+  version:   "  &8› &7Версия: &f{value}"
+  ping:      "  &8› &7Пинг: &f{value}мс"
+  ping-offline: "  &8› &7Пинг: &7—"
+  ip:        "  &8› &7IP: &f{value}"
+  flags-clean: "  &8› &7Флаги: &aЧисто"
+  flags-dirty: "  &8› &7Флаги: &c{value}"
+  last-seen: "  &8› &7Последний вход: &f{value}"
+  playtime:  "  &8› &7На сервере: &f{value}"
+  spawn:     "  &8› &7Спавн: &f{value}"
+  spawn-none: "Не задан"
+  warns:     "  &8› &7Варны: &c{current}&8/&c{max}"
+  alts-header: "  &8› &7Альты (один IP):"
+  alts-entry:  "    &8- &e{name}"
+  ban-active:  "  &8› &c[БАН] &f{reason} &8| &7до: &c{expires}"
+  mute-active: "  &8› &e[МУТ] &f{reason} &8| &7до: &e{expires}"
+  warns-header: "  &8› &7Предупреждения:"
+  warns-entry:  "    &8[#{id}] &f{reason} &8| &7{admin} | до: &f{expires}"
+  notes-header: "  &8› &7Заметки стаффа:"
+  notes-entry:  "    &8[#{id}] &7{author} &8| &f{note} &8({date})"
+  footer: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# История наказаний (/adm history)
+history:
+  header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  title:  "  &4&lИстория наказаний: &f{player}"
+  bans-header:  "&c  Баны ({count}):"
+  mutes-header: "&e  Муты ({count}):"
+  warns-header: "&6  Варны ({count}):"
+  entry-ban:  "    &8[{date}] &f{reason} &8| &7{admin} | до: &f{expires}"
+  entry-warn: "    &8[#{id} | {date}] &f{reason} &8| &7{admin} | до: &f{expires}"
+  footer: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# Freeze сообщения игроку
+freeze:
+  player-message: "&c⚠ Вы заморожены администрацией сервера."
+  player-unfreeze: "&aВы разморожены."
+  move-blocked: "&cДвижение заблокировано!"
+
+# Screenshare
+screenshare:
+  started: "&8[&cSS&8] &7Проверка запущена для &c{player}&7. Таймер: &f{time}"
+  reminder: "&c⚠ Откройте демонстрацию экрана! Осталось: &f{time}"
+  timer-expired: "&8[&cSS&8] &7Игрок &c{player} &7забанен — таймер истёк."
+  cleared: "&8[&cSS&8] &7Проверка &f{player} &7завершена."
+  not-under-check: "&cЭтот игрок не находится под проверкой."
+  player-cleared: "&aПроверка завершена. Вы свободны!"
+  auto-banned: "&8[&cSS&8] &7Игрок &c{player} &7автоматически забанен (выход во время SS)."
+  list-header: "&8[&cSS&8] &7Игроки под проверкой:"
+  list-empty: "  &7Никто не проходит проверку."
+  list-entry: "  &8» &c{player}"
+
+# Punishments — дополнительные ключи
+punishments:
+  unmute-notify: "&aВаш мут был снят администрацией."
+  ban-success: "&7Игрок &c{player} &7забанен. Причина: &f{reason}"
+  mute-success: "&7Игрок &e{player} &7замучен до: &f{duration}"
+  warn-success: "&7Предупреждение выдано &f{player}"
+  unwarn-success: "&7Варн &c#{id} &7удалён у &f{player}"
+  kick-success: "&7Игрок &f{player} &7кикнут."
+
+# Misc — дополнительные ключи
+misc:
+  spy-enabled: "&8[&4SPY&8] &7Вы начали следить за &c{player}&7."
+  spy-disabled: "&8[&4SPY&8] &7Вы перестали следить за &c{player}&7."
+  invsee-title: "&8Инвентарь &f{player}"
+  invec-title: "&8Эндер сундук &f{player}"
+
+# Reports — дополнительные ключи
+reports:
+  cooldown: "&cВы недавно отправляли репорт. Подождите &f{seconds}с"
+  admin-notification: "&8[&2РЕПОРТ&8] &7{message}"

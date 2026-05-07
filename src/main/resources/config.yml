@@ -1,0 +1,223 @@
+# ╔══════════════════════════════════════════╗
+# ║     CrystallAdmin v2.0 Configuration     ║
+# ║          modrinth.com/crystalladmin      ║
+# ╚══════════════════════════════════════════╝
+
+# ═════════════════════════════════════════
+#   GENERAL SETTINGS
+# ═════════════════════════════════════════
+general:
+  # Language: 'en' or 'ru'
+  # Loads messages from messages_en.yml or messages_ru.yml
+  language: ru
+
+  # Server display name (used in kick/ban screens)
+  server-name: "CrystallBloom"
+
+  # Contact info for ban appeals
+  contact: "@mcsreal"
+  contact-platform: "Discrod"
+
+# ═════════════════════════════════════════
+#   DISCORD WEBHOOKS
+# ═════════════════════════════════════════
+discord:
+  enabled: false
+  webhook-url: "https://discord.com/api/webhooks/YOUR_WEBHOOK_HERE"
+  log-commands: true
+  log-reports: true
+  log-punishments: true
+  log-anticheat: true
+
+# ═════════════════════════════════════════
+#   ANTI-CHEAT SYSTEM
+# ═════════════════════════════════════════
+anticheat:
+  # Global toggle - disable entire anticheat module
+  enabled: true
+
+  # Show alerts to admins with permission crystalladmin.anticheat.alerts
+  show-alerts: true
+
+  # Auto-kick on violation threshold
+  auto-kick:
+    enabled: false
+    threshold: 50  # Total VL (violation level)
+
+  # Auto-ban on severe violations
+  auto-ban:
+    enabled: false
+    threshold: 100
+
+  # Individual check modules
+  modules:
+    reach:
+      enabled: true
+      max-distance: 3.5       # blocks (vanilla = 3.0, buffer for lag)
+      min-violations: 5       # consecutive hits needed to flag
+      max-ping: 300           # ignore if ping > this (ms)
+      vl-per-violation: 5
+
+    fast-place:
+      enabled: true
+      max-blocks-per-second: 15
+      vl-per-violation: 3
+
+    auto-clicker:
+      enabled: true
+      max-cps: 20             # clicks per second
+      check-window: 10        # seconds
+      vl-per-violation: 5
+
+    fly:
+      enabled: true
+      max-y-speed: 1.5        # blocks/tick
+      vl-per-violation: 10
+
+    xray:
+      enabled: true
+      # Notify admins when ore/stone ratio is suspicious
+      notify-threshold: 3.0   # percent (diamonds/stone)
+      # Flag only if player's ratio is X times higher than server average
+      deviation-multiplier: 2.5
+      vl-per-flag: 10
+
+    client-brand:
+      enabled: true
+      # Detect known cheat clients by their brand string
+      # This is passive detection, no violations issued
+      alert-on-detect: true
+
+# ═════════════════════════════════════════
+#   PUNISHMENT SCREENS
+# ═════════════════════════════════════════
+screens:
+  ban-permanent: |
+    &c&l{server} &8» &fПерманентная блокировка
+    &8&m                              
+    &7Причина &8» &f{reason}
+    &8&m                              
+    &cАдминистратор: &6{admin}
+    &fОбжалование: &6{platform} {contact}
+
+  ban-temp: |
+    &c&l{server} &8» &fВременная блокировка
+    &8&m                              
+    &7Причина &8» &f{reason}
+    &7Истекает &8» &f{duration}
+    &8&m                              
+    &cАдминистратор: &6{admin}
+    &fОбжалование: &6{platform} {contact}
+
+  kick: |
+    &c&l{server} &8» &fВы были кикнуты
+    &8&m                              
+    &7Причина &8» &f{reason}
+    &8&m                              
+    &fАдминистратор: &c{admin}
+
+# ═════════════════════════════════════════
+#   MODERATION SETTINGS
+# ═════════════════════════════════════════
+moderation:
+  mute:
+    blocked-commands:
+      - "me"
+      - "msg"
+      - "tell"
+      - "w"
+      - "r"
+      - "reply"
+    allowed-commands:
+      - "tpa"
+      - "tpaccept"
+      - "home"
+      - "spawn"
+      - "report"
+
+  warns:
+    max-display: 3
+
+  reports:
+    cooldown-seconds: 60
+
+  vanish:
+    fake-messages: true
+    fake-leave: "&e{player} &fпокинул игру"
+    fake-join: "&e{player} &fзашёл на сервер"
+
+  freeze:
+    message-on-freeze: "&c⚠ Вы заморожены администрацией."
+    message-on-unfreeze: "&aВы разморожены."
+    move-blocked: "&cДвижение заблокировано!"
+
+  screenshare:
+    enabled: true
+    title: "&c&lЭКРАН-ШАРИНГ"
+    subtitle: "&fСвяжитесь: &6{contact}"
+    timer-seconds: 180
+    reminder-interval: 30
+    auto-ban-reason: "Выход во время SS проверки"
+
+# ═════════════════════════════════════════
+#   ADMIN CHAT
+# ═════════════════════════════════════════
+admin-chat:
+  quick-prefix: "#"
+  format: "&8[&4ADMIN&8] &c{player}&8: &7{message}"
+
+# ═════════════════════════════════════════
+#   BROADCASTS & MESSAGES
+# ═════════════════════════════════════════
+messages:
+  broadcast-format: |
+    
+    &8&m          &r &8[&6ОБЪЯВЛЕНИЕ&8]&r &8&m          
+    
+      &e{message}
+    
+    &8&m                              
+
+  anonymous-format: "&2ОТВЕТ АДМИНИСТРАЦИИ&8: &a{message}"
+
+# ═════════════════════════════════════════
+#   LAGG CLEAR (Auto cleanup)
+# ═════════════════════════════════════════
+lagg-clear:
+  enabled: true
+  interval-seconds: 300  # 5 minutes (0 = disable auto)
+
+  warnings-before-clear:
+    - 60
+    - 30
+    - 10
+    - 5
+
+  warning-message: "&8[&6LAGG CLEAR&8] &eОчистка через &f{seconds}с"
+  clear-message: "&8[&6LAGG CLEAR&8] &aОчищено: &f{count} &7объектов"
+
+  clear-items: true
+  clear-mobs: false
+  keep-tamed: true
+  keep-named: true
+
+# ═════════════════════════════════════════
+#   X-RAY MONITOR
+# ═════════════════════════════════════════
+ore-monitor:
+  enabled: true
+  notify-on-mine: true
+  notify-threshold: 5  # notify after X ores mined in 1 hour
+
+  tracked-ores:
+    - DIAMOND_ORE
+    - DEEPSLATE_DIAMOND_ORE
+    - ANCIENT_DEBRIS
+    - EMERALD_ORE
+    - DEEPSLATE_EMERALD_ORE
+
+  background-blocks:
+    - STONE
+    - COBBLESTONE
+    - DEEPSLATE
+    - TUFF

@@ -1,0 +1,127 @@
+name: CrystallAdmin
+version: 2.0.0
+main: ru.crystallbloom.crystalladmin.CrystallAdmin
+api-version: '1.21'
+author: _l1stok_
+description: Advanced administration toolkit with anti-cheat, moderation, and monitoring
+website: https://modrinth.com/plugin/crystalladmin
+
+commands:
+  # Main command with /ca alias
+  adm:
+    description: Main admin command
+    usage: /adm <subcommand>
+    aliases: [ca]
+    permission: crystalladmin.admin
+
+  # Standalone unique commands (no /adm prefix needed)
+  checkplayer:
+    description: Check player info
+    usage: /checkplayer <player>
+    aliases: [cp, cpa]
+    permission: crystalladmin.admin
+
+  checkore:
+    description: X-Ray detection stats
+    usage: /checkore <player>
+    permission: crystalladmin.admin
+
+  screenshare:
+    description: Start screenshare check
+    usage: /screenshare <player>
+    aliases: [ss]
+    permission: crystalladmin.admin
+
+  staffnote:
+    description: Add staff note
+    usage: /staffnote <player> <note>
+    aliases: [note]
+    permission: crystalladmin.admin
+
+  invsee:
+    description: View player inventory
+    usage: /invsee <player>
+    permission: crystalladmin.admin
+
+  enderchest:
+    description: View player ender chest
+    usage: /enderchest <player>
+    aliases: [ec, invec]
+    permission: crystalladmin.admin
+
+  adminchat:
+    description: Toggle admin chat
+    usage: /adminchat
+    aliases: [ac]
+    permission: crystalladmin.admin
+
+  # Standard punishment commands
+  report:
+    description: Send a report to admins
+    usage: /report <text>
+    permission: crystalladmin.report
+
+  ban:
+    description: Ban a player permanently
+    usage: /ban <player> <reason>
+    permission: crystalladmin.admin
+
+  tempban:
+    description: Temporarily ban a player
+    usage: /tempban <player> <time> <reason>
+    permission: crystalladmin.admin
+
+  unban:
+    description: Unban a player
+    usage: /unban <player>
+    permission: crystalladmin.admin
+
+  mute:
+    description: Mute a player
+    usage: /mute <player> <time/perm> <reason>
+    permission: crystalladmin.admin
+
+  tempmute:
+    description: Temporarily mute a player
+    usage: /tempmute <player> <time> <reason>
+    permission: crystalladmin.admin
+
+  unmute:
+    description: Unmute a player
+    usage: /unmute <player>
+    permission: crystalladmin.admin
+
+  warn:
+    description: Warn a player
+    usage: /warn <player> <time/perm> <reason>
+    permission: crystalladmin.admin
+
+  unwarn:
+    description: Remove a warn
+    usage: /unwarn <player> <number>
+    permission: crystalladmin.admin
+
+  kick:
+    description: Kick a player with custom screen
+    usage: /kick <player> <reason>
+    permission: crystalladmin.admin
+
+permissions:
+  crystalladmin.admin:
+    description: Full admin access
+    default: op
+  crystalladmin.report:
+    description: Send reports
+    default: true
+  crystalladmin.bypass.mute:
+    description: Bypass mute restrictions
+    default: op
+  crystalladmin.bypass.freeze:
+    description: Bypass freeze
+    default: op
+  crystalladmin.bypass.ss:
+    description: Bypass screenshare checks
+    default: op
+  crystalladmin.anticheat.alerts:
+    description: Receive anti-cheat alerts
+    default: op

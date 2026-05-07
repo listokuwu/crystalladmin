@@ -1,0 +1,286 @@
+# ═══════════════════════════════════════════════════
+#   CrystallAdmin - English Localization
+# ═══════════════════════════════════════════════════
+
+# General messages
+general:
+  no-permission: "&cInsufficient permissions."
+  player-only: "&cThis command is player-only."
+  player-not-found: "&cPlayer &f{player} &cnot found."
+  player-offline: "&cPlayer is offline."
+  invalid-time-format: "&cInvalid time format. Examples: 30m, 1h, 7d, 1mo, perm"
+  database-error: "&cDatabase error. Contact administrator."
+  config-reloaded: "&8[&aCrystallAdmin&8] &7Config reloaded."
+
+# Punishment commands
+punishments:
+  ban-success: "&7Player &c{player} &7banned. Reason: &f{reason}"
+  ban-success-temp: "&7Player &c{player} &7banned until &f{duration}"
+  unban-success: "&7Player &f{player} &7unbanned."
+  unban-not-found: "&cNo active ban found for &f{player}&c."
+
+  mute-success: "&7Player &e{player} &7muted until &f{duration}"
+  unmute-success: "&7Player &f{player} &7unmuted."
+  unmute-not-found: "&cNo active mute found for &f{player}&c."
+
+  warn-success: "&7Warning issued to &f{player}"
+  unwarn-success: "&7Warn &c#{id} &7removed from &f{player}"
+  unwarn-not-found: "&cWarn not found."
+
+  kick-success: "&7Player &f{player} &7kicked."
+
+  muted-message: |
+    &8[&cMUTE&8] &fYou are muted.
+    &7Reason: &c{reason}
+    &7Remaining: &c{remaining}
+
+# Reports
+reports:
+  sent: |
+    
+    &8[&2REPORT&8] &7Your report has been sent to staff.
+    &8Message: &f{message}
+
+  cooldown: "&cYou recently sent a report. Wait &f{seconds}s"
+  admin-notification: "&8[&2REPORT&8] &7New report from &f{player}&8: &f{message}"
+  claimed: "&8[&2REPORTS&8] &7Report &c#{id} &7claimed."
+  closed: "&8[&2REPORTS&8] &7Report &c#{id} &7closed."
+  teleported: "&8[&2REPORTS&8] &7Teleported to report &c#{id}"
+  location-unavailable: "&cReport location unavailable."
+  pending-notification: "&8[&2REPORTS&8] &7Pending: &c{count} &7reports. &8/adm reports"
+
+# Admin chat
+admin-chat:
+  enabled: "&8[&4ADMINCHAT&8] &7Mode &aenabled&7."
+  disabled: "&8[&4ADMINCHAT&8] &7Mode &cdisabled&7."
+
+# Vanish
+vanish:
+  enabled: "&8[&4VANISH&8] &7Vanish mode &aenabled&7."
+  disabled: "&8[&4VANISH&8] &7Vanish mode &cdisabled&7."
+
+# Freeze
+freeze:
+  frozen: "&7Player &f{player} &7frozen."
+  unfrozen: "&7Player &f{player} &7unfrozen."
+
+# Screenshare
+screenshare:
+  started: "&8[&cSS&8] &7Check started for &c{player}&7. Timer: &f{time}"
+  cleared: "&7Check for &f{player} &7completed."
+  not-under-check: "&cThis player is not under check."
+  player-frozen: "&aCheck completed. You are free!"
+  auto-banned: "&8[&cSS&8] &7Player &c{player} &7banned for leaving during check."
+  list-header: "&8[&cSS&8] &7Players under check:"
+  list-empty: "  &7No one is being checked."
+  list-entry: "  &8» &c{player}"
+
+# Staff notes
+notes:
+  added: "&8[&7NOTES&8] &7Note added to &f{player}'s profile"
+  deleted: "&7Note &c#{id} &7deleted."
+  not-found: "&cNote not found."
+  list-header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  list-title: "  &7Notes about &f{player} &8({count}):"
+  list-empty: "  &7No notes."
+  list-footer: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# Misc commands
+misc:
+  anonymous-sent: "&7Anonymous message sent to &f{player}"
+  teleported: "&7Silent teleport to &f{player}"
+  lp-class-set: "&7Player &f{player} &7set to group &f{group}"
+  alert-sent: "&7Alert sent to all players."
+  spy-enabled: "&8[&4SPY&8] &7Spying on &c{player} &aenabled&7."
+  spy-disabled: "&8[&4SPY&8] &7Spying on &c{player} &cdisabled&7."
+
+# Anti-cheat
+anticheat:
+  alert: "&8[&c⚠ AC&8] &7{player} &8→ &c{check} &8| &7VL: &c{vl} &8| &7{details}"
+  checks:
+    reach: "Reach"
+    fast-place: "FastPlace"
+    auto-clicker: "AutoClicker"
+    fly: "Fly"
+    xray: "X-Ray"
+    brand: "Cheat Client"
+
+# X-Ray monitor
+xray:
+  notification: "&8[&6X-RAY&8] &7{player} &7mined &c{ore} &8(&7last hour: &c{count}&8)"
+  report-header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  report-title: "  &6&lX-RAY Monitor &8— &f{player}"
+  report-background: "  &8» &7Background mined: &f{count}"
+  report-suspicious: " &c⚠ SUSPICIOUS"
+  report-overall: "  &8» &7Total diamonds: &f{count}"
+  report-footer: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# Statistics
+stats:
+  header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  title: "  &6&lServer Statistics"
+  tps: "  &8» &7TPS: &f{tps}"
+  memory: "  &8» &7RAM: &f{used}&7/&f{max} &8(&c{percent}%&8)"
+  players: "  &8» &7Players: &f{online}&7/&f{max}"
+  uptime: "  &8» &7Uptime: &f{uptime}"
+  footer: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# Help pages
+help:
+  header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  title: "  &4&lCrystallAdmin &8v2.0 &8— &7Page {page}/{total}"
+  footer: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  next-page: "  &7/adm help {page} &8— &7next page"
+
+  commands:
+    page1:
+      - "  &c/adm cp &8<player> &7— player info card"
+      - "  &c/adm chat &7or &c/ac &7— admin chat (prefix: &f#&7)"
+      - "  &c/adm bc &8<text> &7— broadcast"
+      - "  &c/adm a &8<player> <text> &7— anonymous message"
+      - "  &c/adm reports &7— reports GUI"
+      - "  &c/adm vanish &7or &c/adm v &7— vanish mode"
+      - "  &c/adm class &8<player> <group> &7— set LP group"
+      - "  &c/adm freeze &8<player> &7— freeze player"
+      - "  &c/adm spy &8<player> &7— spy on commands"
+
+    page2:
+      - "  &c/ban &8<player> <reason> &7— permanent ban"
+      - "  &c/tempban &8<player> <time> <reason>"
+      - "  &c/unban &8<player>"
+      - "  &c/mute &8<player> <time/perm> <reason>"
+      - "  &c/unmute &8<player>"
+      - "  &c/warn &8<player> <time/perm> <reason>"
+      - "  &c/unwarn &8<player> <number>"
+      - "  &c/kick &8<player> <reason>"
+      - "  &c/adm history &8<player> &7— punishment history"
+      - "  &7Time formats: &f30m 1h 12h 1d 7d 1mo perm"
+
+    page3:
+      - "  &c/ss &8<player> &7— screenshare check"
+      - "  &c/adm ssclear &8<player> &7— check passed"
+      - "  &c/note &8<player> <text> &7— add note"
+      - "  &c/adm notes &8<player> &7— view notes"
+      - "  &c/invsee &8<player> &7— view inventory"
+      - "  &c/ec &8<player> &7— view ender chest"
+      - "  &c/checkore &8<player> &7— X-Ray monitor"
+      - "  &c/adm alert &8<text> &7— title to all"
+      - "  &c/adm tpo &8<player> &7— silent TP"
+      - "  &c/adm stats &7— server statistics"
+      - "  &c/adm lc &7— manual cleanup"
+      - "  &c/adm reload &7— reload config"
+
+# Player history
+history:
+  header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  title: "  &4&lPunishment History: &f{player}"
+  bans-header: "&c  Bans ({count}):"
+  mutes-header: "&e  Mutes ({count}):"
+  warns-header: "&6  Warns ({count}):"
+  footer: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# /cp player card
+cp:
+  header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  status-online: "&aOnline"
+  status-offline: "&7Offline"
+  uuid: "  &8› &7UUID: &f{value}"
+  client: "  &8› &7Client: &f{value}"
+  version: "  &8› &7Version: &f{value}"
+  ping: "  &8› &7Ping: &f{value}ms"
+  ping-offline: "  &8› &7Ping: &7—"
+  ip: "  &8› &7IP: &f{value}"
+  flags-clean: "  &8› &7Flags: &aClean"
+  flags-dirty: "  &8› &7Flags: &c{value}"
+  last-seen: "  &8› &7Last seen: &f{value}"
+  playtime: "  &8› &7Playtime: &f{value}"
+  spawn: "  &8› &7Spawn: &f{value}"
+  spawn-none: "Not set"
+  warns: "  &8› &7Warns: &c{current}&8/&c{max}"
+  alts-header: "  &8› &7Alts (same IP):"
+  alts-entry: "    &8- &e{name}"
+  ban-active: "  &8› &c[BAN] &f{reason} &8| &7until: &c{expires}"
+  mute-active: "  &8› &e[MUTE] &f{reason} &8| &7until: &e{expires}"
+  warns-header: "  &8› &7Warnings:"
+  warns-entry: "    &8[#{id}] &f{reason} &8| &7{admin} | until: &f{expires}"
+  notes-header: "  &8› &7Staff notes:"
+  notes-entry: "    &8[#{id}] &7{author} &8| &f{note} &8({date})"
+
+# Player card (/cp)
+cp:
+  header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  status-online: "&aOnline"
+  status-offline: "&7Offline"
+  uuid:      "  &8› &7UUID: &f{value}"
+  client:    "  &8› &7Client: &f{value}"
+  version:   "  &8› &7Version: &f{value}"
+  ping:      "  &8› &7Ping: &f{value}ms"
+  ping-offline: "  &8› &7Ping: &7—"
+  ip:        "  &8› &7IP: &f{value}"
+  flags-clean: "  &8› &7Flags: &aClean"
+  flags-dirty: "  &8› &7Flags: &c{value}"
+  last-seen: "  &8› &7Last seen: &f{value}"
+  playtime:  "  &8› &7Playtime: &f{value}"
+  spawn:     "  &8› &7Spawn: &f{value}"
+  spawn-none: "Not set"
+  warns:     "  &8› &7Warns: &c{current}&8/&c{max}"
+  alts-header: "  &8› &7Alts (same IP):"
+  alts-entry:  "    &8- &e{name}"
+  ban-active:  "  &8› &c[BAN] &f{reason} &8| &7until: &c{expires}"
+  mute-active: "  &8› &e[MUTE] &f{reason} &8| &7until: &e{expires}"
+  warns-header: "  &8› &7Warnings:"
+  warns-entry:  "    &8[#{id}] &f{reason} &8| &7{admin} | until: &f{expires}"
+  notes-header: "  &8› &7Staff notes:"
+  notes-entry:  "    &8[#{id}] &7{author} &8| &f{note} &8({date})"
+  footer: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# Punishment history (/adm history)
+history:
+  header: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  title:  "  &4&lPunishment History: &f{player}"
+  bans-header:  "&c  Bans ({count}):"
+  mutes-header: "&e  Mutes ({count}):"
+  warns-header: "&6  Warns ({count}):"
+  entry-ban:  "    &8[{date}] &f{reason} &8| &7{admin} | until: &f{expires}"
+  entry-warn: "    &8[#{id} | {date}] &f{reason} &8| &7{admin} | until: &f{expires}"
+  footer: "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# Freeze messages for player
+freeze:
+  player-message: "&c⚠ You have been frozen by the server administration."
+  player-unfreeze: "&aYou have been unfrozen."
+  move-blocked: "&cMovement is blocked!"
+
+# Screenshare
+screenshare:
+  started: "&8[&cSS&8] &7Check started for &c{player}&7. Timer: &f{time}"
+  reminder: "&c⚠ Please start screen sharing! Time left: &f{time}"
+  timer-expired: "&8[&cSS&8] &7Player &c{player} &7banned — timer expired."
+  cleared: "&8[&cSS&8] &7Check for &f{player} &7completed."
+  not-under-check: "&cThis player is not under a screenshare check."
+  player-cleared: "&aCheck completed. You are free!"
+  auto-banned: "&8[&cSS&8] &7Player &c{player} &7automatically banned (disconnected during SS)."
+  list-header: "&8[&cSS&8] &7Players under check:"
+  list-empty: "  &7No one is being checked."
+  list-entry: "  &8» &c{player}"
+
+# Punishments — additional keys
+punishments:
+  unmute-notify: "&aYour mute has been removed by an administrator."
+  ban-success: "&7Player &c{player} &7banned. Reason: &f{reason}"
+  mute-success: "&7Player &e{player} &7muted until: &f{duration}"
+  warn-success: "&7Warning issued to &f{player}"
+  unwarn-success: "&7Warn &c#{id} &7removed from &f{player}"
+  kick-success: "&7Player &f{player} &7kicked."
+
+# Misc — additional keys
+misc:
+  spy-enabled: "&8[&4SPY&8] &7Now spying on &c{player}&7."
+  spy-disabled: "&8[&4SPY&8] &7Stopped spying on &c{player}&7."
+  invsee-title: "&8Inventory &f{player}"
+  invec-title: "&8Ender Chest &f{player}"
+
+# Reports — additional keys
+reports:
+  cooldown: "&cYou recently sent a report. Wait &f{seconds}s"
+  admin-notification: "&8[&2REPORT&8] &7{message}"
